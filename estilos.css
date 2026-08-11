@@ -1,0 +1,478 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+    background-color: #F7F5F0;
+    color: #252525;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   COLORES
+   Rojo vino: #8F263D
+   Azul sobrio: #28527A
+   Amarillo mostaza: #D6A928
+   Blanco: #FFFFFF
+   ========================================= */
+
+
+/* =========================================
+   HEADER
+   Modelo de caja + posición
+   ========================================= */
+
+header {
+    position: relative;
+    width: 100%;
+    height: 205px;
+    padding: 30px;
+    margin-bottom: 14px;
+    border: 2px solid #8F263D;
+    background-color: #8F263D;
+    color: #FFFFFF;
+    overflow: hidden;
+}
+
+.titulo {
+    position: relative;
+    z-index: 2;
+    width: 58%;
+    padding: 10px;
+}
+
+.etiqueta {
+    margin: 0 0 8px 0;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #D6A928;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 38px;
+    letter-spacing: 1px;
+}
+
+header p:not(.etiqueta) {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+header img {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 270px;
+    height: 171px;
+    padding: 3px;
+    border: 2px solid #FFFFFF;
+    object-fit: cover;
+}
+
+
+/* =========================================
+   NAV
+   ========================================= */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 58px;
+    padding: 12px 20px;
+    margin-bottom: 14px;
+    border: 2px solid #28527A;
+    background-color: #28527A;
+}
+
+nav a {
+    display: inline-block;
+    padding: 5px 12px;
+    margin: 3px 8px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #D6A928;
+}
+
+
+/* =========================================
+   INFORMACIÓN DEL SISMO
+   ========================================= */
+
+.info-sismo {
+    width: 100%;
+    padding: 20px 25px;
+    margin-bottom: 15px;
+    border: 2px solid #D6A928;
+    background-color: #FFFFFF;
+}
+
+.info-sismo h2 {
+    margin: 0 0 15px 0;
+    color: #8F263D;
+    font-size: 25px;
+}
+
+.datos-sismo {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.datos-sismo div {
+    flex: 1;
+    padding: 10px 12px;
+    border-left: 4px solid #28527A;
+}
+
+.datos-sismo strong {
+    display: block;
+    color: #8F263D;
+    font-size: 14px;
+}
+
+.datos-sismo span {
+    display: block;
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+.fuente {
+    margin-bottom: 0;
+    font-size: 12px;
+    color: #666666;
+}
+
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+   Modelo de posición con FLEX
+   ========================================= */
+
+main {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   SECTION PRINCIPAL
+   ========================================= */
+
+main section {
+    width: 72%;
+    padding: 28px;
+    border: 2px solid #8F263D;
+    background-color: #FFFFFF;
+}
+
+main section h2 {
+    margin: 0 0 12px 0;
+    color: #8F263D;
+    font-size: 27px;
+}
+
+main section > p {
+    margin-top: 0;
+}
+
+
+/* =========================================
+   ZONAS
+   ========================================= */
+
+.zona {
+    padding: 17px 18px;
+    margin: 15px 0;
+    border: 1px solid #D9D9D9;
+    background-color: #FFFFFF;
+}
+
+.zona h3 {
+    margin: 5px 0 7px 0;
+    color: #28527A;
+    font-size: 21px;
+}
+
+.zona p {
+    margin: 0;
+}
+
+.zona.principal {
+    border-left: 6px solid #8F263D;
+}
+
+.zona.importante {
+    border-left: 6px solid #D6A928;
+}
+
+.nivel {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #8F263D;
+}
+
+
+/* =========================================
+   SECCIONES DE AYUDA
+   ========================================= */
+
+.seccion-ayuda {
+    padding: 20px;
+    margin-top: 25px;
+    border-top: 2px solid #28527A;
+}
+
+.seccion-ayuda h2 {
+    margin-bottom: 15px;
+}
+
+.ayuda-ciudadana,
+.ayuda-oficial {
+    padding: 18px;
+    margin: 14px 0;
+    border: 1px solid #D9D9D9;
+    background-color: #FFFFFF;
+}
+
+.ayuda-ciudadana {
+    border-left: 5px solid #D6A928;
+}
+
+.ayuda-oficial {
+    border-left: 5px solid #28527A;
+}
+
+.ayuda-ciudadana h3,
+.ayuda-oficial h3 {
+    margin-top: 0;
+    color: #28527A;
+}
+
+.ayuda-ciudadana ul,
+.ayuda-oficial ul {
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+.advertencia {
+    padding: 12px;
+    margin-top: 15px;
+    border: 1px solid #D6A928;
+    background-color: #FFF9E6;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   BOTONES
+   ========================================= */
+
+.boton {
+    display: inline-block;
+    padding: 10px 17px;
+    margin-top: 7px;
+    border: 2px solid #8F263D;
+    background-color: #8F263D;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.boton:hover {
+    background-color: #28527A;
+    border-color: #28527A;
+}
+
+
+/* =========================================
+   VERIFICACIÓN
+   ========================================= */
+
+.verificacion {
+    padding: 18px;
+    margin-top: 25px;
+    border: 2px solid #D6A928;
+    background-color: #FDFBF5;
+}
+
+.verificacion h3 {
+    margin-top: 0;
+    color: #8F263D;
+}
+
+
+/* =========================================
+   ASIDE — EMERGENCIAS
+   ========================================= */
+
+aside {
+    position: sticky;
+    top: 20px;
+    width: 28%;
+    padding: 22px;
+    border: 2px solid #28527A;
+    background-color: #F7F5F0;
+}
+
+aside .etiqueta {
+    color: #8F263D;
+}
+
+aside h2 {
+    margin: 0 0 22px 0;
+    color: #8F263D;
+    font-size: 25px;
+}
+
+.numero {
+    padding: 13px;
+    margin-bottom: 12px;
+    border: 1px solid #D6A928;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.numero strong {
+    display: block;
+    margin-bottom: 3px;
+    color: #8F263D;
+    font-size: 25px;
+}
+
+.numero span {
+    display: block;
+    font-size: 14px;
+}
+
+.nota-emergencia {
+    padding: 12px;
+    margin-top: 18px;
+    border-top: 1px solid #28527A;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    width: 100%;
+    padding: 32px;
+    border: 2px solid #28527A;
+    background-color: #28527A;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+footer h2 {
+    margin: 0 0 12px 0;
+    font-size: 27px;
+}
+
+footer .etiqueta {
+    color: #D6A928;
+}
+
+footer p {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================
+   COLOMBIA TE BUSCA
+   ========================================= */
+
+.ciudadania {
+    padding: 20px;
+    margin: 25px auto;
+    max-width: 850px;
+    border: 1px solid #D6A928;
+    background-color: #23496C;
+}
+
+.ciudadania h3 {
+    margin-top: 0;
+    color: #FFFFFF;
+}
+
+
+/* =========================================
+   MENSAJE FINAL
+   ========================================= */
+
+.mensaje-final {
+    max-width: 850px;
+    padding: 28px;
+    margin: 30px auto;
+    border: 1px solid #D6A928;
+    background-color: #8F263D;
+    color: #FFFFFF;
+}
+
+.mensaje-final h2 {
+    color: #FFFFFF;
+}
+
+.mensaje-final .firma {
+    margin-top: 20px;
+    color: #D6A928;
+    font-weight: bold;
+}
+
+.fuente-final {
+    font-size: 12px;
+    color: #D7DCE1;
+}
+
+
+/* =========================================
+   MODELO DE CAJA
+   ========================================= */
+
+header,
+nav,
+.info-sismo,
+main section,
+aside,
+footer,
+.zona,
+.ayuda-ciudadana,
+.ayuda-oficial,
+.numero,
+.verificacion,
+.mensaje-final {
+    box-sizing: border-box;
+}
